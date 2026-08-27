@@ -1,3 +1,7 @@
+# ==============================================================================
+# ENTERPRISE AGENTIC RAG - REQUIREMENTS (Local, No GCP)
+# ==============================================================================
+
 # --- CORE API & WEB FRAMEWORK ---
 fastapi                     # High-performance web framework for the API
 uvicorn[standard]           # ASGI server to run the FastAPI app
@@ -8,11 +12,9 @@ numpy                       # Numerical processing
 pytz                        # Timezone handling for logs
 nest-asyncio                # Support for nested async loops in notebooks/streamlit
 
-# --- GEMINI & MISTRAL EMBEDDINGS ---
+# --- GEMINI EMBEDDINGS ---
 google-generativeai         # Gemini API — embeddings (text-embedding-004 / gemini-embedding-001)
 langchain-google-genai      # LangChain integration for Gemini models
-mistralai                   # Official Mistral Python SDK (LLMs + Embeddings)
-langchain-mistralai         # LangChain integration for Mistral models & embeddings
 
 # --- VECTOR DB & RETRIEVAL ---
 qdrant-client               # Vector Database for semantic search
@@ -52,5 +54,8 @@ ragas                       # RAG-specific evaluation metrics (Faithfulness, Rel
 deepeval                    # Pytest-compatible test runner wrapping RAGAS & safety metrics
 langfuse                    # Live production monitoring, tracing & user feedback collection
 
-# --- EMBEDDINGS & RERANKERS ---
+# --- EMBEDDINGS (SENTENCE TRANSFORMERS) ---
 sentence-transformers       # Used by FlashRank reranker internally
+langchain_google_genai
+
+langchain-google-vertexai
